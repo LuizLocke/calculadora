@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora 2.0</title>
+
+
+
+    <script>
+        
+        var n1 = 0;
+        var n2 = 0;
+        var operador;
+
+        function btn_(param){
+
+            if(document.getElementById("resultado").innerHTML == 0)
+        { 
+            document.getElementById("resultado").innerHTML = param;
+        }
+            else 
+            { 
+            document.getElementById("resultado").innerHTML += param;
+         }
+
+            
+        }
+
+        function somar(){
+            operador = "+";
+              n1 = document.getElementById("resultado").innerHTML;
+              document.getElementById("resultado").innerHTML = 0;
+
+         }
+
+         function subtrair(){
+            operador = "-";
+              n1 = document.getElementById("resultado").innerHTML;
+              document.getElementById("resultado").innerHTML = 0;
+                }
+
+
+                function multiplicar(){
+                    operador = "*";
+              n1 = document.getElementById("resultado").innerHTML;
+              document.getElementById("resultado").innerHTML = 0;
+                }
+
+                function dividir(){
+                    operador = "/";
+              n1 = document.getElementById("resultado").innerHTML;
+              document.getElementById("resultado").innerHTML = 0;
+                }
+
+
+
+            function resultar(){
+            n2 = document.getElementById("resultado").innerHTML;
+            if (operador == "+") document.getElementById("resultado").innerHTML = Number(n1) + Number(n2);
+            else if (operador == "-") document.getElementById("resultado").innerHTML = Number(n1) - Number(n2);
+            else if (operador == "/") document.getElementById("resultado").innerHTML = Number(n1) / Number(n2);
+            else if (operador == "*") document.getElementById("resultado").innerHTML = Number(n1) * Number(n2);
+             }
+
+             function limpar(){
+                n1 = 0;
+                n2 = 0;
+                operador = "";
+                document.getElementById("resultado").innerHTML = "0";
+             }
+
+    </script>
+
+</head>
+
+<body>
+
+    <p id="resultado">0</p>
+    
+    <div>
+        <button onclick="limpar()">C</button>
+        <button onclick="dividir()">/</button>
+        <button onclick="multiplicar()">X</button>
+        <button onclick="resultar()">=</button>
+    </div>
+
+
+    <div>
+        <button onclick="btn_(7)">7</button>
+        <button onclick="btn_(8)">8</button>
+        <button onclick="btn_(9)">9</button>
+        <button onclick="subtrair()">-</button>
+    </div>
+
+
+    <div>
+        <button onclick="btn_(4)">4</button>
+        <button onclick="btn_(5)">5</button>
+        <button onclick="btn_(6)">6</button>
+        <button onclick="somar()">+</button>
+    </div>
+
+
+    <div>
+        <button onclick="btn_(1)">1</button>
+        <button onclick="btn_(2)">2</button>
+        <button onclick="btn_(3)">3</button>
+        <button onclick="btn_(0)">0</button>
+    </div>
+
+
+
+
+    
+</body>
+</html>
