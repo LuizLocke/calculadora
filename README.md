@@ -1,1 +1,1 @@
-https://github.com/LuizLocke/calculadora.git
+https://luizlocke.github.io/calculadora/
